@@ -1,0 +1,6 @@
+-module(dog).
+-export().
+
+	setname(Name)-> Name.
+
+	setkind(Kind)-> Kind.

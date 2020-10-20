@@ -1,0 +1,15 @@
+-module(afile_client).
+-export([ls/1,get_file/2]).
+%开始函数
+	ls(Server)->
+		Server!{self(),list_dir},
+		receive 
+			{Server,FileList} ->
+				FileList
+				end.
+	get_flie(Server,File)->
+		Server！{self(),(),{get_file,File}},
+		reveive
+			{Serve,Content}->
+				Content
+		end.
